@@ -1,0 +1,766 @@
+/* =========================================
+   PELUCHE NEÓN 💗🧸
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #000;
+    font-family: Arial, sans-serif;
+    color: white;
+}
+
+
+/* =========================================
+   ESCENA
+   ========================================= */
+
+.scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at center 42%,
+            rgba(255, 20, 147, 0.08),
+            transparent 35%
+        ),
+        #000;
+}
+
+
+/* =========================================
+   PELUCHE
+   ========================================= */
+
+.teddy {
+    position: absolute;
+    width: 230px;
+    height: 310px;
+
+    left: 50%;
+    top: 125px;
+
+    transform: translateX(-50%);
+
+    transform-style: preserve-3d;
+
+    filter:
+        drop-shadow(0 0 10px #ff4fc3)
+        drop-shadow(0 0 25px #ff1493);
+
+    animation: teddyFloat 4s ease-in-out infinite;
+
+    z-index: 5;
+}
+
+
+/* =========================================
+   OREJAS
+   ========================================= */
+
+.ear {
+    position: absolute;
+
+    width: 75px;
+    height: 75px;
+
+    top: 15px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff1fa,
+            #ffb4df 45%,
+            #e76ab2
+        );
+
+    border: 2px solid #ffc9e9;
+
+    box-shadow:
+        inset 0 0 15px rgba(255, 255, 255, 0.5),
+        0 0 15px #ff4fc3;
+}
+
+.ear-left {
+    left: 5px;
+}
+
+.ear-right {
+    right: 5px;
+}
+
+
+/* =========================================
+   CABEZA
+   ========================================= */
+
+.head {
+    position: absolute;
+
+    width: 180px;
+    height: 165px;
+
+    left: 25px;
+    top: 30px;
+
+    border-radius: 48% 48% 45% 45%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            #fff1fa,
+            #ffbde1 38%,
+            #ed82bf 70%,
+            #cf4d99
+        );
+
+    border: 2px solid #ffd1eb;
+
+    box-shadow:
+        inset -12px -12px 25px rgba(190, 45, 130, 0.5),
+        inset 10px 10px 25px rgba(255, 255, 255, 0.5),
+        0 0 20px #ff4fc3;
+}
+
+
+/* =========================================
+   OJOS
+   ========================================= */
+
+.eye {
+    position: absolute;
+
+    width: 22px;
+    height: 27px;
+
+    top: 65px;
+
+    border-radius: 50%;
+
+    background: #050005;
+
+    border: 2px solid #ffd5ed;
+
+    box-shadow: 0 0 8px #ff4fc3;
+}
+
+.eye::after {
+    content: "";
+
+    position: absolute;
+
+    width: 6px;
+    height: 6px;
+
+    top: 4px;
+    left: 5px;
+
+    border-radius: 50%;
+
+    background: white;
+}
+
+.eye-left {
+    left: 42px;
+}
+
+.eye-right {
+    right: 42px;
+}
+
+
+/* =========================================
+   HOCICO
+   ========================================= */
+
+.muzzle {
+    position: absolute;
+
+    width: 70px;
+    height: 55px;
+
+    left: 55px;
+    bottom: 25px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff0f9,
+            #ffc8e5 55%,
+            #e979b6
+        );
+
+    box-shadow:
+        inset 0 -5px 10px rgba(190, 50, 130, 0.35);
+}
+
+
+/* NARIZ */
+
+.nose {
+    position: absolute;
+
+    width: 22px;
+    height: 15px;
+
+    top: 12px;
+    left: 24px;
+
+    border-radius: 50%;
+
+    background: #571033;
+
+    box-shadow:
+        0 0 7px #ff4fc3;
+}
+
+
+/* BOCA */
+
+.mouth {
+    position: absolute;
+
+    width: 25px;
+    height: 13px;
+
+    left: 22px;
+    top: 27px;
+
+    border-bottom: 3px solid #581033;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================
+   CUERPO
+   ========================================= */
+
+.body {
+    position: absolute;
+
+    width: 150px;
+    height: 145px;
+
+    left: 40px;
+    top: 155px;
+
+    border-radius: 45% 45% 35% 35%;
+
+    background:
+        radial-gradient(
+            circle at 35% 20%,
+            #fff0f9,
+            #ffb7df 40%,
+            #e878b6 72%,
+            #c74791
+        );
+
+    border: 2px solid #ffc9e8;
+
+    box-shadow:
+        inset 0 -15px 25px rgba(180, 45, 125, 0.45),
+        inset 10px 10px 20px rgba(255, 255, 255, 0.4),
+        0 0 20px #ff4fc3;
+}
+
+
+/* =========================================
+   BRAZOS
+   ========================================= */
+
+.arm {
+    position: absolute;
+
+    width: 55px;
+    height: 90px;
+
+    top: 15px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffe8f5,
+            #ed8bc3,
+            #d45aa2
+        );
+
+    border: 2px solid #ffc9e8;
+
+    box-shadow:
+        inset 5px 5px 10px rgba(255, 255, 255, 0.35);
+}
+
+.arm-left {
+    left: -32px;
+    transform: rotate(35deg);
+}
+
+.arm-right {
+    right: -32px;
+    transform: rotate(-35deg);
+}
+
+
+/* =========================================
+   CORAZÓN DEL PECHO
+   ========================================= */
+
+.heart {
+    position: absolute;
+
+    z-index: 10;
+
+    left: 42px;
+    top: 38px;
+
+    font-size: 65px;
+
+    color: #ff4fc3;
+
+    text-shadow:
+        0 0 8px #ff4fc3,
+        0 0 20px #ff1493,
+        0 0 35px #ff1493;
+
+    animation: heartGlow 2s ease-in-out infinite;
+}
+
+
+/* =========================================
+   PIERNAS
+   ========================================= */
+
+.leg {
+    position: absolute;
+
+    width: 75px;
+    height: 65px;
+
+    bottom: -25px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #fff0f9,
+            #ffb9df 55%,
+            #dc68aa
+        );
+
+    border: 2px solid #ffc9e5;
+
+    box-shadow:
+        inset 5px 5px 12px rgba(255, 255, 255, 0.35),
+        0 0 12px #ff4fc3;
+}
+
+.leg-left {
+    left: -5px;
+}
+
+.leg-right {
+    right: -5px;
+}
+
+
+/* =========================================
+   MOÑO
+   ========================================= */
+
+.bow {
+    position: absolute;
+
+    z-index: 20;
+
+    top: 145px;
+    left: 82px;
+}
+
+.bow-left,
+.bow-right {
+    position: absolute;
+
+    width: 48px;
+    height: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ff9bd5,
+            #e52a92
+        );
+
+    border: 2px solid #ffc7e7;
+
+    box-shadow:
+        0 0 12px #ff4fc3;
+}
+
+.bow-left {
+    right: 4px;
+
+    border-radius: 50% 10% 50% 50%;
+
+    transform: rotate(-15deg);
+}
+
+.bow-right {
+    left: 4px;
+
+    border-radius: 10% 50% 50% 50%;
+
+    transform: rotate(15deg);
+}
+
+.bow-center {
+    position: absolute;
+
+    z-index: 2;
+
+    left: 38px;
+    top: 8px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #ff4fc3;
+
+    box-shadow:
+        0 0 10px #ff1493;
+}
+
+
+/* =========================================
+   ÓRBITA
+   ========================================= */
+
+.orbit {
+    position: absolute;
+
+    width: 330px;
+    height: 110px;
+
+    left: 50%;
+    top: 310px;
+
+    transform: translateX(-50%) rotate(-10deg);
+
+    border: 2px solid #ff69c8;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 5px #ff69c8,
+        0 0 15px #ff1493,
+        0 0 30px rgba(255, 20, 147, 0.7);
+
+    animation: orbitSpin 5s linear infinite;
+
+    z-index: 2;
+}
+
+
+/* =========================================
+   DESTELLOS
+   ========================================= */
+
+.spark {
+    position: absolute;
+
+    color: #fff;
+
+    font-size: 22px;
+
+    text-shadow:
+        0 0 5px white,
+        0 0 15px #ff4fc3,
+        0 0 25px #ff1493;
+
+    animation: sparkle 2s ease-in-out infinite;
+
+    z-index: 8;
+}
+
+.spark1 {
+    top: 25%;
+    left: 20%;
+}
+
+.spark2 {
+    top: 35%;
+    right: 18%;
+}
+
+.spark3 {
+    top: 55%;
+    left: 15%;
+}
+
+.spark4 {
+    top: 48%;
+    right: 15%;
+}
+
+
+/* =========================================
+   TEXTO
+   ========================================= */
+
+.message {
+    position: absolute;
+
+    left: 0;
+    right: 0;
+
+    bottom: 70px;
+
+    width: 100%;
+
+    padding: 0 15px;
+
+    text-align: center;
+
+    z-index: 20;
+}
+
+.message h1 {
+    margin: 0 0 10px 0;
+
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 40px;
+
+    color: #ff9bd8;
+
+    text-shadow:
+        0 0 8px #ff4fc3,
+        0 0 20px #ff1493;
+}
+
+.message p {
+    margin: 0 auto;
+
+    width: 100%;
+    max-width: 400px;
+
+    text-align: center;
+
+    font-size: 17px;
+    line-height: 1.4;
+
+    color: #ffd9ef;
+
+    text-shadow:
+        0 0 8px #ff4fc3;
+}
+
+
+/* =========================================
+   ANIMACIÓN DEL PELUCHE
+   ========================================= */
+
+@keyframes teddyFloat {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+
+/* =========================================
+   ANIMACIÓN DEL CORAZÓN
+   ========================================= */
+
+@keyframes heartGlow {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.12);
+    }
+}
+
+
+/* =========================================
+   ANIMACIÓN DE LA ÓRBITA
+   ========================================= */
+
+@keyframes orbitSpin {
+
+    from {
+        transform: translateX(-50%) rotate(-10deg);
+    }
+
+    to {
+        transform: translateX(-50%) rotate(350deg);
+    }
+}
+
+
+/* =========================================
+   ANIMACIÓN DE DESTELLOS
+   ========================================= */
+
+@keyframes sparkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(0.8);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+
+/* =========================================
+   AJUSTES PARA CELULAR 📱
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .scene {
+        width: 100%;
+        height: 100vh;
+        min-height: 100vh;
+    }
+
+    .teddy {
+        width: 230px;
+        height: 310px;
+
+        left: 50%;
+        top: 145px;
+
+        transform: translateX(-50%) scale(0.82);
+
+        animation: teddyFloatMobile 4s ease-in-out infinite;
+    }
+
+    .orbit {
+        width: 310px;
+        height: 105px;
+
+        left: 50%;
+        top: 325px;
+
+        transform: translateX(-50%) rotate(-10deg);
+    }
+
+    .message {
+        left: 0;
+        right: 0;
+
+        bottom: 65px;
+
+        width: 100%;
+
+        padding-left: 15px;
+        padding-right: 15px;
+
+        text-align: center;
+    }
+
+    .message h1 {
+        width: 100%;
+
+        margin: 0 auto 10px auto;
+
+        font-size: 38px;
+
+        text-align: center;
+    }
+
+    .message p {
+        width: 100%;
+        max-width: 380px;
+
+        margin: 0 auto;
+
+        font-size: 17px;
+
+        text-align: center;
+    }
+
+    @keyframes teddyFloatMobile {
+
+        0%,
+        100% {
+            transform: translateX(-50%) translateY(0) scale(0.82);
+        }
+
+        50% {
+            transform: translateX(-50%) translateY(-10px) scale(0.82);
+        }
+    }
+}
+
+
+/* =========================================
+   CELULARES MUY PEQUEÑOS
+   ========================================= */
+
+@media (max-height: 700px) {
+
+    .teddy {
+        top: 105px;
+        transform: translateX(-50%) scale(0.70);
+    }
+
+    .orbit {
+        top: 275px;
+        width: 280px;
+    }
+
+    .message {
+        bottom: 45px;
+    }
+
+    .message h1 {
+        font-size: 34px;
+    }
+
+    .message p {
+        font-size: 15px;
+    }
+}
